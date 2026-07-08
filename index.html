@@ -92,13 +92,20 @@ nav{
 /* HERO */
 
 .hero{
-    min-height:90vh;
+    min-height:100vh;
     display:flex;
     align-items:center;
 }
 
+.hero.container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
 .hero-content{
-    max-width:900px;
+    max-width:550px;
 }
 
 .hero h1{
@@ -129,7 +136,19 @@ nav{
 .hero-btn:hover{
     transform:translateY(-2px);
 }
+.hero-image{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
 
+.hero-image img{
+    width:100%;
+    max-width:520px;
+    border-radius:24px;
+    object-fit:cover;
+    display:block;
+}
 /* FEATURE IMAGE */
 
 .feature-image {
@@ -343,9 +362,34 @@ footer{
 
 <!-- HERO -->
 
-<section class="hero container">
+ <section class="hero container">
+
+  <section class="hero container">
 
     <div class="hero-content">
+
+        <h1>
+            Photography.<br>
+            Simplified.
+        </h1>
+
+        <p>
+            Wedding, Portrait and Commercial Photography
+            focused on authentic stories, natural light
+            and timeless visuals.
+        </p>
+
+        <a href="#work" class="hero-btn">
+            View Work
+        </a>
+
+    </div>
+
+    <div class="hero-image">
+        <img src="fashionshoot01.jpg" alt="Sahil Bisht">
+    </div>
+
+</section>
 
        <h1>
     Sahil Bisht
