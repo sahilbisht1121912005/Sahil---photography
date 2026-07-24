@@ -1,675 +1,467 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sahil Bisht — Photography</title>
+<title>Sahil Bisht | Photographer & Filmmaker</title>
+
+<meta name="description" content="Wedding, Fashion, Commercial and Portrait Photographer based in Delhi.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-:root{
-    --bg:#ffffff;
-    --text:#111111;
-    --secondary:#6e6e73;
-    --border:#e5e5e7;
-    --max-width:1400px;
-}
+<link rel="stylesheet" href="style.css">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Inter',sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-}
-
-img{
-    width:100%;
-    display:block;
-}
-
-.container{
-    width:min(92%, var(--max-width));
-    margin:auto;
-}
-
-/* NAVBAR */
-
-nav{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-
-   backdrop-filter:blur(20px);
-    -webkit-backdrop-filter:blur(20px);
-    background:rgba(255,255,255,.75);
-    border-bottom:1px solid rgba(255,255,255,.2);
-    box-shadow:0 10px 40px rgba(0,0,0,.05);
-    transition:all .4s ease;
-}
-
-.nav-inner{
-       display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:22px 0;
-}
-
-.logo{
-    font-size:28px;
-    font-weight:700;
-    letter-spacing:4px;
-}
-
-.nav-links{
-    display:flex;
-    gap:32px;
-}
-
-.nav-links a{
-    text-decoration:none;
-    color:var(--text);
-    font-size:14px;
-    transition:.3s;
-}
-
-.nav-links a:hover{
-    opacity:.5;
-}
-.nav-links a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-5px;
-    width:0;
-    height:2px;
-    background:black;
-    transition:.3s;
-}
-
-.nav-links a:hover::after{
-    width:100%;
-}    
-
-/* HERO */
-
-.hero{
-    min-height:90vh;
-    display:flex;
-    align-items:center;
-    position:relative;
-    overflow:hidden;
-}
-.hero::before{
-    content:"";
-    position:absolute;
-    width:600px;
-    height:600px;
-    background:radial-gradient(circle, rgba(0,0,0,.08), transparent 70%);
-    top:-180px;
-    right:-180px;
-    border-radius:50%;
-    z-index:0;
-}
-
-.hero-grid,
-.hero-content,
-.hero-image{
-    position:relative;
-    z-index:1;
-}
-.hero-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-}
-
-.hero.container{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:80px;
-    align-items:center;
-}
-
-.hero-content{
-    max-width:550px;
-}
-
-.hero h1{
-    font-size:clamp(3rem,8vw,7rem);
-    font-weight:600;
-    line-height:1;
-    letter-spacing:-4px;
-    margin-bottom:25px;
-}
-
-.hero p{
-    max-width:600px;
-    color:var(--secondary);
-    font-size:1.2rem;
-}
-
-.hero-btn{
-    display:inline-block;
-    margin-top:40px;
-    padding:14px 26px;
-    text-decoration:none;
-    color:white;
-    background:black;
-    border-radius:999px;
-    transition:.3s;
-position:relative;
-overflow:hidden;
-box-shadow:0 15px 35px rgba(0,0,0,.15);
-}
-.hero-btn::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:-120%;
-    width:100%;
-    height:100%;
-    background:linear-gradient(
-        120deg,
-        transparent,
-        rgba(255,255,255,.4),
-        transparent
-    );
-    transition:.8s;
-}
-.hero-btn:hover{
-    transform:translateY(-5px) scale(1.05);
-    box-shadow:0 20px 45px rgba(0,0,0,.25);
-}
-    .hero-btn:hover::before{
-    left:120%;
-}
-  .hero-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    align-items:center;
-    gap:80px;
-}  
-.hero-image{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.hero-image img{
-    width:100%;
-    max-width:520px;
-    border-radius:24px;
-    object-fit:cover;
-    display:block;
-
-    box-shadow:0 40px 80px rgba(0,0,0,.15);
-    transition:.5s ease;
-    animation:float 6s ease-in-out infinite;
-}
-  .hero-image img:hover{
-    transform:translateY(-12px) scale(1.02);
-}
-/* FEATURE IMAGE */
-
-.feature-image {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.feature-image img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-/* SECTION */
-
-.section{
-    padding:120px 0;
-}
-
-.section-title{
-    font-size:14px;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    color:var(--secondary);
-    margin-bottom:40px;
-}
-.gallery{
-    column-count:2;
-    column-gap:24px;
-    margin-top:20px;
-}
-
-.gallery-item{
-    break-inside:avoid;
-    margin-bottom:24px;
-    border-radius:20px;
-    overflow:hidden;
-
-    cursor:pointer;
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
-    transition:.4s;
-    background:#fff;
-}
-
-.gallery-item img{
-    width:100%;
-    display:block;
-    transition:transform .5s ease;
-    filter:brightness(.97);
-    border-radius:20px;
-}
-.gallery-item:hover{
-    transform:translateY(-8px);
-    box-shadow:0 25px 60px rgba(0,0,0,.18);
-}
-
-.gallery-item:hover img{
-    transform:scale(1.08);
-    filter:brightness(1.05);
-}
-
-
-/* ABOUT */
-
-.about{
-    max-width:800px;
-}
-
-.about p{
-    font-size:1.4rem;
-    color:var(--secondary);
-}
-
-/* CONTACT */
-
-.contact{
-    text-align:center;
-}
-
-.contact h2{
-    font-size:clamp(2rem,5vw,4rem);
-    margin-bottom:20px;
-}
-
-.contact p{
-    color:var(--secondary);
-    margin-bottom:40px;
-}
-
-.contact a{
-    color:var(--text);
-    text-decoration:none;
-    font-size:1.1rem;
-}
-
-/* FOOTER */
-
-footer{
-    padding:40px 0;
-    border-top:1px solid var(--border);
-}
-
-.footer-inner{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    color:var(--secondary);
-    font-size:14px;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.nav-links{
-    gap:18px;
-}
-
-.hero{
-    min-height:75vh;
-}
-
-.hero h1{
-    letter-spacing:-2px;
-}
-
-.gallery{
-    grid-template-columns:1fr;
-}
-
-.about p{
-    font-size:1.1rem;
-}
-
-.footer-inner{
-    flex-direction:column;
-    gap:10px;
-    text-align:center;
-}
-
-}.slider{
-    position:relative;
-    width:100%;
-    height:80vh;
-    overflow:hidden;
-}
-
-.slide{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-
-    opacity:0;
-    transition:opacity 1s ease-in-out;
-}
-
-.slide.active{
-    opacity:1;
-}
-/* LIGHTBOX */
-
-.lightbox{
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.95);
-    justify-content:center;
-    align-items:center;
-    z-index:9999;
-}
-
-.lightbox img{
-    width:auto;
-    height:auto;
-
-    max-width:85vw;
-    max-height:85vh;
-
-    object-fit:contain;
-
-    border-radius:10px;
-}
-
-.lightbox.active{
-    display:flex;
-}
-
-.lightbox-close{
-    position:absolute;
-    top:20px;
-    right:30px;
-    font-size:40px;
-    color:white;
-    cursor:pointer;
-}
- @media (max-width:768px){
-
-    .hero-grid{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-
-    .hero-content{
-        max-width:100%;
-    }
-
-    .hero-image img{
-        max-width:100%;
-    }
-
-    .hero h1{
-        font-size:3rem;
-    }
-
-} 
-@keyframes float{
-    0%{
-        transform:translateY(0);
-    }
-    50%{
-        transform:translateY(-15px);
-    }
-    100%{
-        transform:translateY(0);
-    }
-}  
-.reveal{
-    opacity:0;
-    transform:translateY(60px);
-    transition:all .8s ease;
-}
-
-.reveal.active{
-    opacity:1;
-    transform:translateY(0);
-}
-    body.loading{
-    opacity:0;
-    transform:translateY(20px);
-    animation:pageLoad 1s ease forwards;
-}
-
-@keyframes pageLoad{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-</style>
 </head>
-<body class="loading">
 
-<!-- NAVIGATION -->
+<body>
 
-<nav>
-    <div class="nav-inner">
-        <div class="logo">SAHIL</div>
+<!-- =========================
+     NAVBAR
+========================= -->
 
-        <div class="nav-links">
-            <a href="#work">Work</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </div>
+<header class="header">
+
+<div class="container">
+
+<nav class="navbar">
+
+<div class="logo">
+SAHIL
+</div>
+
+<ul class="nav-menu">
+
+<li><a href="#work">Work</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#services">Services</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+<a href="#contact" class="nav-btn">
+Let's Talk
+</a>
+
 </nav>
 
-<!-- HERO -->
+</div>
+
+</header>
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
-    <div class="container hero-grid">
 
-    <div class="hero-content">
+<div class="container hero-grid">
 
-        <h1>
-            Photography.<br>
-            Simplified.
-        </h1>
+<div class="hero-content">
 
-        <p>
-            Wedding, Portrait and Commercial Photography
-            focused on authentic stories, natural light
-            and timeless visuals.
-        </p>
+<p class="hero-tag">
+PHOTOGRAPHER • FILMMAKER
+</p>
 
-        <a href="#work" class="hero-btn">
-            View Work
-        </a>
+<h1>
 
-    </div>
-        
-<div class="hero-image">
-    <img src="fashionshoot01.jpg" alt="Sahil Bisht">
+Creating
+Visual Stories
+That Last Forever.
+
+</h1>
+
+<p class="hero-description">
+
+Wedding, Fashion, Commercial and Portrait Photography
+crafted with cinematic storytelling and timeless aesthetics.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#work" class="primary-btn">
+
+View Portfolio
+
+</a>
+
+<a href="#contact" class="secondary-btn">
+
+Book a Shoot
+
+</a>
+
 </div>
-        
-</div>   
-</section>
 
+</div>
 
-<!-- FEATURE IMAGE -->
+<div class="hero-image">
 
-<section class="feature-image container">
+<img src="images/hero.jpg" alt="Sahil Bisht">
 
-    <div class="slider">
+</div>
 
-        <img class="slide active" src="fashionshoot01.jpg">
-        <img class="slide" src="fashionshoot02.jpg">
-        <img class="slide" src="fashionshoot03.jpg">
-        <img class="slide" src="fashionshoot04.jpg">
-        <img class="slide" src="fashionshoot05.jpg">
+</div>
 
-    </div>
+<div class="scroll-indicator">
+
+<span></span>
+
+</div>
 
 </section>
 
-<!-- WORK -->
+<!-- =========================
+     FEATURED SLIDER
+========================= -->
 
-<section id="work" class="section reveal">
+<section class="featured-slider">
 
-    <div class="section-title">
-        Selected Work
-    </div>
+<div class="slider">
 
-    <div class="gallery">
+<img src="images/fashionshoot01.jpg" class="slide active">
 
-        <div class="gallery-item">
-            <img src="IMG_4761 copy.jpg" onclick="openLightbox(this.src)">
+<img src="images/fashionshoot02.jpg" class="slide">
+
+<img src="images/fashionshoot03.jpg" class="slide">
+
+<img src="images/fashionshoot04.jpg" class="slide">
+
+<img src="images/fashionshoot05.jpg" class="slide">
+
+</div>
+<!-- =========================
+     SELECTED WORK
+========================= -->
+
+<section class="section" id="work">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <p class="section-tag">Portfolio</p>
+
+            <h2 class="section-title">
+                Selected Work
+            </h2>
+
         </div>
 
-        <div class="gallery-item">
-            <img src="DSC00386 copy.jpg" onclick="openLightbox(this.src)">
-        </div>
+        <div class="gallery">
 
-        <div class="gallery-item">
-            <img src="DSC00246 copy.jpg" onclick="openLightbox(this.src)">
-        </div>
+            <div class="gallery-item">
+                <img src="images/IMG_4761 copy.jpg" alt="Photography" onclick="openLightbox(this.src)">
+            </div>
 
-        <div class="gallery-item">
-            <img src="DSC00068 copy.jpg.jpeg" onclick="openLightbox(this.src)">
+            <div class="gallery-item">
+                <img src="images/DSC00386 copy.jpg" alt="Photography" onclick="openLightbox(this.src)">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/DSC00246 copy.jpg" alt="Photography" onclick="openLightbox(this.src)">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/DSC00068 copy.jpg.jpeg" alt="Photography" onclick="openLightbox(this.src)">
+            </div>
+
+            <!-- Future Images -->
+
         </div>
 
     </div>
 
 </section>
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
 
-<section id="about" class="section reveal">
+<section class="section about-section" id="about">
 
-    <div class="section-title">
-        About
-    </div>
+    <div class="container about-grid">
 
-    <div class="about">
-        <p>
-            I'm Sahil Bisht, a photographer and filmmaker based in Delhi.
-            I create visual stories through weddings, portraits, commercial
-            work and travel photography with a focus on simplicity,
-            emotion and timeless aesthetics.
-        </p>
+        <div class="about-image">
+
+            <img src="images/hero.jpg" alt="Sahil Bisht">
+
+        </div>
+
+        <div class="about-content">
+
+            <p class="section-tag">
+                About Me
+            </p>
+
+            <h2>
+
+                Photographer.
+                Filmmaker.
+                Storyteller.
+
+            </h2>
+
+            <p>
+
+                I'm Sahil Bisht, a photographer and filmmaker based in Delhi.
+
+                I specialize in weddings, fashion, commercial, portrait and travel photography.
+
+                My goal is to create timeless visuals that people can connect with emotionally.
+
+            </p>
+
+            <a href="#contact" class="primary-btn">
+
+                Work With Me
+
+            </a>
+
+        </div>
+
     </div>
 
 </section>
 
-<!-- CONTACT -->
+<!-- =========================
+     SERVICES
+========================= -->
 
-<section id="contact" class="section reveal">
+<section class="section services" id="services">
 
-    <h2>Let's Create Together.</h2>
+<div class="container">
 
-    <p>
-        Available for weddings, commercial projects,
-        brand campaigns and destination shoots,product shoot.
-    </p>
+<div class="section-header">
 
-    <a href="mailto:hello@sahilbisht.com">
-        Sahilbisht1121912005@gmail.com
-    </a>
+<p class="section-tag">
+
+Services
+
+</p>
+
+<h2 class="section-title">
+
+What I Shoot
+
+</h2>
+
+</div>
+
+<div class="services-grid">
+
+<div class="service-card">
+
+<h3>
+
+Wedding Photography
+
+</h3>
+
+<p>
+
+Luxury wedding photography with cinematic storytelling.
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<h3>
+
+Fashion Photography
+
+</h3>
+
+<p>
+
+Creative campaigns, editorials and model portfolios.
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<h3>
+
+Commercial Shoot
+
+</h3>
+
+<p>
+
+Professional product and brand photography.
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<h3>
+
+Travel Photography
+
+</h3>
+
+<p>
+
+Beautiful destinations and storytelling imagery.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-<!-- FOOTER -->
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="section contact-section" id="contact">
+
+<div class="container">
+
+<p class="section-tag">
+
+Contact
+
+</p>
+
+<h2>
+
+Let's Create Something Amazing.
+
+</h2>
+
+<p>
+
+Available worldwide for weddings,
+commercial,
+fashion,
+travel and product photography.
+
+</p>
+
+<div class="contact-buttons">
+
+<a href="mailto:Sahilbisht1121912005@gmail.com" class="primary-btn">
+
+Email Me
+
+</a>
+
+<a href="https://wa.me/919220421913" class="secondary-btn">
+
+WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-    <div class="footer-inner container">
+<div class="container footer-grid">
 
-        <div>
-            © 2026 Sahil Bisht
-        </div>
+<div>
 
-        <div>
-            <a href="https://instagram.com/filmsartbysahil" target="_blank">Instagram</a>
-&nbsp; · &nbsp;
+<h3>
 
-<a href="https://wa.me/9220421913" target="_blank">WhatsApp</a>
-        </div>
+SAHIL
 
-    </div>
+</h3>
+
+<p>
+
+Photography & Films
+
+</p>
+
+</div>
+
+<div>
+
+<a href="#work">
+
+Work
+
+</a>
+
+<a href="#about">
+
+About
+
+</a>
+
+<a href="#services">
+
+Services
+
+</a>
+
+<a href="#contact">
+
+Contact
+
+</a>
+
+</div>
+
+<div>
+
+<a href="https://instagram.com/filmsartbysahil" target="_blank">
+
+Instagram
+
+</a>
+
+<a href="https://wa.me/919220421913" target="_blank">
+
+WhatsApp
+
+</a>
+
+</div>
+
+</div>
 
 </footer>
-<script>
 
-const slides = document.querySelectorAll('.slide');
+<!-- =========================
+     LIGHTBOX
+========================= -->
 
-let current = 0;
+<div class="lightbox" id="lightbox">
 
-setInterval(() => {
+<span class="close-lightbox">
 
-    slides[current].classList.remove('active');
+&times;
 
-    current++;
+</span>
 
-    if(current >= slides.length){
-        current = 0;
-    }
+<img id="lightbox-image">
 
-    slides[current].classList.add('active');
-
-},3000);
-
-</script><div class="lightbox" id="lightbox">
-    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-    <img id="lightbox-img">
-</div><script>
-function openLightbox(src){
-    document.getElementById("lightbox").classList.add("active");
-    document.getElementById("lightbox-img").src = src;
-}
-
-function closeLightbox(){
-    document.getElementById("lightbox").classList.remove("active");
-}
-</script>
-</body>
-</html>
+</div>
+</section>
